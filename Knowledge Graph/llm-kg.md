@@ -70,3 +70,11 @@ Instruction-driven Knowledge Graph Construction，SELF-REFINE:
 Iterative Refinement with Self-Feedback论文证明了self-reflection，self-refinement，说明了这种监督审查时有效的
 
 在看文献时知道许多模型输出因为格式谬误而导致输出准确率不高，因此schema设定中特意要求以 JSON 格式输出模式定义。
+
+
+# 3.25
+
+昨天读了一篇新论文--Reflexion: Language Agents with
+Verbal Reinforcement Learning，
+这虽然不是一篇kg相关的文章，但他的思路非常有启发，我正好原来的方法遇到了瓶颈，于是尝试使用它的思想--它的反思是，对于LLM的输出写一段评语（反思评价）然后呢再把这段评价带着回去重新做一遍，如此反复
+这几天我一直在原来的思路上进行调整，反复的删改提示词，效果总是不如chatIE，顶多在部分情况下precision超过，一旦监督过于严厉recall就会剧烈下降，而precision只会略微提高，现在用了这个虽然超过chatIE的不多，但是也超过了。
